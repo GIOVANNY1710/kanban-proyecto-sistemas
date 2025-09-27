@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kanban App - Login</title>
+  <meta name="description" content="Aplicación Kanban - Login">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-login">
+  <main class="login-container">
+    <div class="login-card">
+      <div class="login-left">
+        <img src="imagenes/hero.svg" alt="Kanban Hero" class="hero-img">
+      </div>
+      <div class="login-right">
+        <h1>Bienvenido</h1>
+        <p class="muted">Accede a tu tablero Kanban</p>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="user">Usuario</label>
+            <input id="user" name="user" type="text" placeholder="Tu usuario">
+          </div>
+          <div class="form-group">
+            <label for="pass">Contraseña</label>
+            <input id="pass" name="pass" type="password" placeholder="Contraseña">
+          </div>
+          <button type="submit" class="btn-primary">Entrar</button>
+          <p class="muted small">Usuario de prueba: <strong>estudiante</strong> | Contraseña: <strong>1234</strong></p>
+        </form>
+      </div>
+    </div>
+    <footer class="login-footer">Proyecto Kanban - TEINCO · 2025</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

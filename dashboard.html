@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kanban App - Tablero</title>
+  <meta name="description" content="Tablero Kanban interactivo">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+      <img src="favicon.png" class="nav-logo" alt="logo">
+      <span class="nav-title">Proyecto Kanban</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Inicio</a></li>
+      <li><a href="#tablero" class="nav-link">Tablero</a></li>
+      <li><a href="#contacto" class="nav-link">Contáctanos</a></li>
+      <li><button id="logoutBtn" class="btn-ghost">Cerrar sesión</button></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="hero-small">
+    <div class="hero-inner">
+      <h1>Tablero Kanban Interactivo</h1>
+      <p class="muted">Organiza tareas, colabora y avanza más rápido.</p>
+      <img src="imagenes/kanban.svg" alt="kanban" class="hero-small-img">
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="tablero" class="card">
+      <h2>Tu Tablero</h2>
+      <div class="board" id="board">
+        <div class="col" data-status="todo">
+          <h3>Por Hacer</h3>
+          <div class="dropzone" id="todo"></div>
+          <button class="add-btn" data-target="todo">+ Añadir</button>
+        </div>
+        <div class="col" data-status="doing">
+          <h3>En Progreso</h3>
+          <div class="dropzone" id="doing"></div>
+          <button class="add-btn" data-target="doing">+ Añadir</button>
+        </div>
+        <div class="col" data-status="done">
+          <h3>Completado</h3>
+          <div class="dropzone" id="done"></div>
+          <button class="add-btn" data-target="done">+ Añadir</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="card contact-card">
+      <h2>Contáctanos</h2>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <label>Nombre</label>
+            <input type="text" id="cname" placeholder="Tu nombre">
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" id="cemail" placeholder="tu@correo.com">
+          </div>
+          <div class="form-row">
+            <label>Mensaje</label>
+            <textarea id="cmsg" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </form>
+        <div class="contact-side">
+          <img src="imagenes/contact.svg" alt="contacto" class="contact-img">
+          <p class="muted">Nos interesa tu opinión. Déjanos un mensaje y te contactaremos.</p>
+          <div class="contact-info">
+            <div><strong>Escuela:</strong> TEINCO</div>
+            <div><strong>Año:</strong> 2025</div>
+            <div><strong>Autor:</strong> Estudiantes de Ingeniería de Sistemas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Proyecto Kanban - TEINCO · Hecho por estudiantes</p>
+  </footer>
+
+  <!-- Modal for adding card -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-inner">
+      <h3>Crear nueva tarjeta</h3>
+      <input id="cardTitle" placeholder="Título de la tarjeta">
+      <textarea id="cardDesc" placeholder="Descripción (opcional)"></textarea>
+      <div class="modal-actions">
+        <button id="cancelAdd" class="btn-ghost">Cancelar</button>
+        <button id="confirmAdd" class="btn-primary">Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
