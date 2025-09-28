@@ -10,30 +10,63 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-login">
+
+  <!-- ===== LOGIN ===== -->
   <main class="login-container">
     <div class="login-card">
+      <!-- LADO IZQUIERDO -->
       <div class="login-left">
         <img src="imagenes/hero.svg" alt="Kanban Hero" class="hero-img">
+        <h2>Organiza tus proyectos con Kanban</h2>
+        <p class="muted">Flujo visual, simple y eficiente</p>
       </div>
+
+      <!-- LADO DERECHO -->
       <div class="login-right">
         <h1>Bienvenido</h1>
         <p class="muted">Accede a tu tablero Kanban</p>
+
         <form id="loginForm">
           <div class="form-group">
             <label for="user">Usuario</label>
-            <input id="user" name="user" type="text" placeholder="Tu usuario">
+            <div class="input-icon">
+              <span>👤</span>
+              <input id="user" name="user" type="text" placeholder="Tu usuario">
+            </div>
           </div>
+
           <div class="form-group">
             <label for="pass">Contraseña</label>
-            <input id="pass" name="pass" type="password" placeholder="Contraseña">
+            <div class="input-icon">
+              <span>🔒</span>
+              <input id="pass" name="pass" type="password" placeholder="Contraseña">
+            </div>
           </div>
+
           <button type="submit" class="btn-primary">Entrar</button>
-          <p class="muted small">Usuario de prueba: <strong>estudiante</strong> | Contraseña: <strong>1234</strong></p>
+
+          <div class="extra-links">
+            <a href="#">¿Olvidaste tu contraseña?</a> | 
+            <a href="#">Registrarse</a>
+          </div>
+
+          <p class="muted small">
+            Usuario de prueba: <strong>estudiante</strong> | Contraseña: <strong>1234</strong>
+          </p>
         </form>
       </div>
     </div>
-    <footer class="login-footer">Proyecto Kanban - TEINCO · 2025</footer>
+
+    <!-- FOOTER -->
+    <footer class="login-footer">
+      <p>Proyecto Kanban - TEINCO · 2025</p>
+      <div class="socials">
+        <a href="mailto:contacto@teinco.edu.co">📧</a>
+        <a href="https://github.com/">🐙</a>
+      </div>
+    </footer>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
