@@ -1,87 +1,63 @@
-/* Styles for the Kanban App */
-/* Import font in HTML for reliability */
-:root{
-  --bg:#f4f6fb;
-  --card:#ffffff;
-  --accent:#6c63ff;
-  --accent-2:#00bfa6;
-  --muted:#6b7280;
-  --glass: rgba(255,255,255,0.6);
+/* ===== LOGIN ===== */
+#login {
+  background: url("imagenes/login-bg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-*{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
-html,body{height:100%;margin:0;background:linear-gradient(180deg,#eef2ff 0%, #f8fafc 100%);color:#111827}
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 320px;
+  transition: transform 0.3s;
+}
 
-/* NAV */
-.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:rgba(44,62,80,0.95);backdrop-filter: blur(6px);color:white;position:sticky;top:0;z-index:50}
-.nav-left{display:flex;align-items:center;gap:12px}
-.nav-logo{width:36px;height:36px;border-radius:8px}
-.nav-title{font-weight:600}
-.nav-links{list-style:none;display:flex;gap:12px;align-items:center;margin:0;padding:0}
-.nav-link{color:white;text-decoration:none;padding:8px 12px;border-radius:8px;transition:all .18s}
-.nav-link:hover{background:rgba(255,255,255,0.06);transform:translateY(-2px)}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;color:white}
+.login-container:hover {
+  transform: translateY(-5px);
+}
 
-/* LOGIN PAGE */
-.bg-login{display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}
-.login-container{width:100%;max-width:1000px;margin:auto}
-.login-card{display:flex;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,0.12)}
-.login-left{flex:1;padding:28px;background:linear-gradient(135deg,#6c63ff33,#00bfa633);display:flex;align-items:center;justify-content:center}
-.hero-img{width:100%;max-width:360px}
-.login-right{flex:1;padding:34px}
-.login-right h1{font-size:28px;margin-bottom:6px}
-.muted{color:var(--muted)}
-.small{font-size:12px}
-.form-group{margin:12px 0;display:flex;flex-direction:column;gap:8px}
-.form-group input{padding:12px;border-radius:8px;border:1px solid #e6e9ef}
-.btn-primary{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;border:none;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(108,99,255,0.18)}
-.login-footer{text-align:center;margin-top:14px;color:var(--muted)}
+.login-form h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
 
-/* HERO SMALL */
-.hero-small{padding:36px 0;background:linear-gradient(90deg,#eef2ff 0%, #ffffff 100%);margin-bottom:18px}
-.hero-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;gap:18px;align-items:center;justify-content:space-between}
-.hero-small-img{width:120px;opacity:0.95}
+.login-form input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
 
-/* CONTAINER & CARDS */
-.container{max-width:1100px;margin:0 auto;padding:0 20px 60px}
-.card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.06);margin-bottom:20px}
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-/* BOARD */
-.board{display:flex;gap:16px;margin-top:14px}
-.col{flex:1;display:flex;flex-direction:column;gap:12px;border-radius:10px;padding:12px;background:linear-gradient(180deg,#ffffff, #fbfdff)}
-.col h3{margin:0;font-size:16px}
-.dropzone{min-height:140px;padding:8px;display:flex;flex-direction:column;gap:10px;border-radius:8px;background:linear-gradient(180deg,#f8fafc,#ffffff);transition:box-shadow .18s}
-.dropzone.dragover{box-shadow:0 8px 30px rgba(99,102,241,0.15)}
+.login-form button:hover {
+  background: #005fa3;
+}
 
-/* CARD ITEM */
-.card-item{background:linear-gradient(180deg,#fff,#fcfcff);padding:10px;border-radius:8px;box-shadow:0 6px 12px rgba(12,16,34,0.06);cursor:grab;border-left:6px solid var(--accent-2)}
-.card-item:hover{transform:translateY(-4px);transition:transform .16s}
-
-/* ADD BTN */
-.add-btn{margin-top:8px;background:transparent;border:1px dashed #dbeafe;padding:8px;border-radius:8px;cursor:pointer;color:var(--accent);font-weight:600}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
-.contact-form .form-row{margin-bottom:12px;display:flex;flex-direction:column;gap:8px}
-.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid #eef2ff}
-.contact-side{background:linear-gradient(135deg,#f8fbff,#ffffff);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
-.contact-img{width:160px}
-
-/* FOOTER */
-.footer{padding:18px;text-align:center;color:var(--muted);font-size:14px}
-
-/* MODAL */
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.5);z-index:90}
-.modal.hidden{display:none}
-.modal-inner{background:white;padding:18px;border-radius:12px;width:90%;max-width:520px;display:flex;flex-direction:column;gap:12px}
-.modal-inner input, .modal-inner textarea{padding:10px;border-radius:8px;border:1px solid #eef2ff}
-.modal-actions{display:flex;gap:12px;justify-content:flex-end}
-
-/* Responsive */
-@media (max-width:900px){
-  .login-card{flex-direction:column}
-  .hero-inner{flex-direction:column;align-items:flex-start;gap:12px}
-  .contact-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
-  .board{flex-direction:column}
+.extra-links {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.extra-links a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.extra-links a:hover {
+  text-decoration: underline;
 }
